@@ -35,7 +35,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 public class RobotContainer {
   // Subsystems
   private final Drive drive;
-  private final Flywheel flywheel;
+  private final Flywheel flywheel;  
 
   // Controller
   private final CommandXboxController controller = new CommandXboxController(0);
