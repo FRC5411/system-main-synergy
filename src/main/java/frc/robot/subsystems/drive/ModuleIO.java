@@ -2,10 +2,8 @@ package frc.robot.subsystems.drive;
 
 import org.littletonrobotics.junction.AutoLog;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
-import edu.wpi.first.math.kinematics.SwerveModulePosition;
 
 public interface ModuleIO {
-    
     @AutoLog
     public static class ModuleIOInputs {
         public double drivePositionM = 0.0;
@@ -35,20 +33,5 @@ public interface ModuleIO {
     public default void stopMotors() {
         setDriveVolts(0);
         setAzimuthVolts(0);
-    }
-
-    public default SwerveModuleState getState() {
-        return new SwerveModuleState(
-            ModuleIOInputs.driveVelocityMPS, 
-            new Rotation2d(ModuleIOInputs.azimuthPositionRAD)
-        );
-    }
-
-    public default SwerveModulePosition getPosition() {
-        return new SwerveModulePosition();
-    }
-
-    public default SwerveModuleState getDesiredState() {
-        return new SwerveModuleState();
     }
 }

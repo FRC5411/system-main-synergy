@@ -84,9 +84,4 @@ public class ModuleSim implements ModuleIO{
         azimuthMotor.setInputVoltage(volts);
         azimuthMotor.update(0.02);
     }
-
-    @Override
-    public SwerveModuleState getState() {
-        return new SwerveModuleState();
-    }
 }
